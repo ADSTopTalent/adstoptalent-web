@@ -105,17 +105,10 @@
    height: 350px;
     display: inline;
     padding-left: 20px;
-  
     max-width: 100%;
       padding-left: 200px;
     padding-top: 54px;
-
-   
-    
     padding-right: 20px;
-  
-
-
 }
 
 .home-banner-image-container {
@@ -192,5 +185,66 @@ height: 534px;
     margin: 20px;
 
   }
+.app-footer
+{
+  margin-top: 20px;
+  background-color: #32302F;
+  color: white;
+  max-width:1349px;
+height:623px;
 
+    box-shadow: 0 -10px 15px -3px rgba(0,0,0,0.2);
 
+}
+.footer-ul
+{
+       margin-right: 8.1571%;
+    width: 45.92145%;
+    list-style: none;
+   
+    max-width: none;
+    color:white;
+    display: block;
+    font-size: 13px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    list-style: none;
+    margin: 0;
+    
+    text-decoration: none;
+}
+.footer-sub
+{
+      background-color: transparent;
+    list-style: none;
+    margin: 10px 0 10px;
+    padding-top: 0; 
+    padding: 0;
+
+   }
+.footer-li
+{
+      font-size: 13px;
+      font-weight: 400;
+      padding: 0;
+       list-style: none;
+   margin: -2px 0 10px;
+   text-decoration: none;
+}
+
+.footer-link-a {
+
+  color: #999;
+  text-decoration: none;
+    display: block;
+   
+   
+   
+}
+.app-footer1
+{
+  background-color: #32302F;
+   display: inline-flex;
+  float: left;
+  margin-right: 2.5788%;
+}
