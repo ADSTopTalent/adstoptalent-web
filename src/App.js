@@ -10,6 +10,7 @@ class App extends Component {
         <Header />
         <Hero />
         <Footer />
+        <p> Hello Mukul </p>
       </div>
     );
   }
