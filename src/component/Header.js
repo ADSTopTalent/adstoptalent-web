@@ -10,6 +10,7 @@ class Header extends Component {
     		<header className="App-header">
           	<Logo />
 	     	<Navigation />
+	     	<p>Update </p>
          	</header>	 
      	</div>
     );}
