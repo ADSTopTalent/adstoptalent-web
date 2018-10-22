@@ -1,0 +1,122 @@
+.Gheader {
+  position: fixed;
+  top: 0;
+  background: #000;
+  color: white;
+  width: 100%;
+  z-index: 1000;
+  height: 36px;
+  transition: all 0.3s ease-in-out;
+}
+
+.Gheader-social {
+  float: left;
+}
+
+.Gheader-social ul {
+  float: left;
+  padding: 0 0 0 25px;
+  margin: 10px 0 0 -2px;
+  border-left: 1px solid #fff;
+  line-height: 15px; 
+}
+
+.Gheader-social ul li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 20px;
+}
+
+.Gheader-social a {
+  color: #fff;
+}
+
+.nav-utilities {
+  float: right;
+}
+
+.nav-utilities ul {
+  padding-right: 32px;
+  padding-left: 0;
+  margin: 0;
+}
+
+.nav-utilities ul li {
+  list-style: none;
+  margin-right: 20px;
+  display: inline;
+}
+
+.nav-utilities ul li button {
+  font-family: "proxima_nova_regular", "Helvetica", san-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 36px;
+  color: #aaaaaa;
+  text-transform: uppercase;
+  background-color: transparent;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border: none;
+}
+
+#login {
+  max-width: 460px;
+  margin: 0 0px;
+  padding: 0;
+  text-align: right;
+}
+
+#joinus {
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: right;
+}
+
+#members-portal {
+  position: relative;
+}
+
+.signintitle {
+  text-align: center;
+}
+
+.GothaMedium {
+  font-family: GothaMedium;
+  font-weight: bold;
+}
+
+.logintextfield {
+  border: 1px solid;
+}
+
+.loginlinks {
+  color: black;
+}
+
+.loginbtn {
+  background-color: #1A2B6D;
+  color: white;
+}
+
+.crossbtn{
+  position: relative;
+  float: right;
+  border: none;
+  top: -20px;
+  left: 20px;
+  color: black;
+}
+
+.field-icon {
+  float: right;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2;
+}
+
+.reqinfo {
+  size: 12px;
+}
