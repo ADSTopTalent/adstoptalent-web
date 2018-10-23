@@ -3,17 +3,39 @@ import './App.css';
 import JoinUs from './JoinUs';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
+import isEmail from 'validator/lib/isEmail';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link ,withRouter} from "react-router-dom";
 
 const customStyles = {
   content : {
-    top                   : '50%',
+    top                   : '35%',
     left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
+    right                 : '40%',
+    bottom                : '-10%',
+    marginRight           : '-40%',
+    transform             : 'translate(-50%, -30%)'
+  }
+};
+
+const Error = (props) => (
+  <div {...props} style={{ color: '#A94442' }} />
+);
+
+export const email = (value, props, components) => {
+  if (!isEmail(value)) {
+    return (
+      <Error>{`${value} is not a valid email.`}</Error>
+    );
+  }
+};
+
+export const required = (value, props, components) => {
+  value = ('' + value).trim();
+  if (!value) {
+    return (
+      <Error>{'This field is required.'}</Error>
+    );
   }
 };
 
@@ -25,6 +47,12 @@ class LoginModal extends React.Component {
     this.state = {modalIsOpen: false};
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.toggleSwitch = this.toggleSwitch.bind(this);
+    this.state = {showPassword: true,}
+  }
+
+  toggleSwitch() {
+    this.setState({ showPassword: !this.state.showPassword });
   }
 
   openModal() {
@@ -37,7 +65,7 @@ class LoginModal extends React.Component {
 
   render() {
     return (
-      <Router>
+      
         <div className="nav-utilities">
           <ul>
             <li id="login">
@@ -51,26 +79,33 @@ class LoginModal extends React.Component {
                 contentLabel="Example Modal">
                 <button className="crossbtn" onClick={this.closeModal}>X</button>
 
-                <form>
+                <form>                 
                   <h2 className="signintitle">LOGIN</h2>
+
                   <legend>Sign in to view your <span className="GothaMedium">ADS</span> account and status.</legend><br />
-                  <label>EMAIL ADDRESS*</label><br />
-                  <input className="logintextfield" type="Email"></input><br />
-                  <label>PASSWORD*</label><br />
-                  <input className="logintextfield" type="password">
-                  </input><br />
-                  
+                        
+                  <label className="loginlabel">EMAIL ADDRESS*</label><br />
+
+                  <input className="logintextfield" name="email" type="email" validations={[required, email]}></input><br />
+             
+                  <label className="loginlabel">PASSWORD*</label><br />
+
+                  <input className="logintextfield" name="password" type="password" validations={[required]}></input><br />
+                        
                   <input type="checkbox" />Remember me<br/><br />
-                  <a className="loginlinks" href="#">Forgot Password?</a><br />
+
+                  <a className="loginlinks" href="#">Forgot Password?</a><br /><br />
+
                   <button className="loginbtn">LOGIN</button><br />
+                      
+                  </form>
                   Don't have an account ?
-                  <Route path='/JoinUs' component={JoinUs} /> 
-                  <Link to = '/JoinUs'>Join us!</Link>
-                </form>
+                  <a href="http://localhost:3000/JoinUs">Join us!</a>
+
+
               </Modal>  
         </div>
-      </Router>
-    );
+      );
   }
 }
 export default LoginModal

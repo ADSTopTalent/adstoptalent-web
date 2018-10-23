@@ -5,21 +5,20 @@ class JoinUs extends Component {
   render() {
     return (
       <div>
-        <form>
+        <form className="signupform">
+          <p className="joinus">JOIN US</p><br />
           <label className="reqinfo">Required*</label><br />
-          <label>FIRSTNAME*</label><br />
-          <input type="text"></input><br />
-          <label>LASTNAME*</label><br />
-          <input type="text"></input><br />
+          <label>FIRST NAME*</label><br />
+          <input className="logintextfield" type="text"></input><br />
+          <label>LAST NAME*</label><br />
+          <input className="logintextfield" type="text"></input><br />
           <label>EMAIL ADDRESS*</label><br />
-          <input type="Email"></input><br />
+          <input className="logintextfield" type="Email"></input><br />
           <label>PASSWORD*</label><br />
-          <input type="password"></input><br />
-          <label>CONFIRM PASSWORD*</label><br />
-          <input type="password"></input><br />
+          <input className="logintextfield" type="password"></input><br />
           <label>GENDER*</label><br />
-          <input type="checkbox" />Female
-          <input type="checkbox" />Male<br/>
+          <input className="logintextfield" type="radio" name="gender" value="Female" />Female
+          <input type="radio" name="gender" value="Male" />Male<br/>
           <button className="loginbtn">CREATE ACCOUNT</button>
 
         </form>
