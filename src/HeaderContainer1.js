@@ -19,7 +19,7 @@ class HeaderContainer1 extends Component {
                 </li>
             </ul>
 
-            <div class="main-nav-wrapper">
+            <div className="main-nav-wrapper">
               <ul id="menu-main-nav" className="nav-link hidden-xs hidden-sm">
                 {this.state.data.map(function(data, i){
                   return <li id="menu-item-28000" className="dropdown">             
@@ -28,14 +28,15 @@ class HeaderContainer1 extends Component {
                      
                     <ul role="menu" className="dropdown-menu">
                       <li id="menu-item-28001" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-28001">
-                          <a title="Ask Tony Anything" href="/ask-tony/">{data.menu[0]}</a>
-                          <a title="Ask Tony Anything" href="/ask-tony/">{data.menu[1]}</a>
-                          <a title="Ask Tony Anything" href="/ask-tony/">{data.menu[2]}</a>
+                          <a title={data.menu[0]} href="/ask-tony/">{data.menu[0]}</a>
+                          <a title={data.menu[1]} href="/ask-tony/">{data.menu[1]}</a>
+                          <a title={data.menu[2]} href="/ask-tony/">{data.menu[2]}</a>
                       </li>
                     </ul>
                   </li>
                 })}
-              </ul>    
+              </ul>   
+               
             </div>
       </div>
     );
