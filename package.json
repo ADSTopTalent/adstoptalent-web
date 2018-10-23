@@ -16,13 +16,20 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+<<<<<<< HEAD
   "eslintConfig": {
     "extends": "react-app"
   },
+=======
+>>>>>>> ATT-Navigation
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
   ]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ATT-Navigation
