@@ -3,12 +3,12 @@ import './AppNavigation.css';
 import Header from './component/Header';
 import Hero from './component/Hero';
 import Navigation from './Navigation';
-
+import Footer from './component/Footer';
 class App extends Component {
   render() {
     return (
-      <div >
-       <Navigation />
+      <div className="app-page"> 
+        <Navigation />
       </div>
     );
   }

@@ -5,17 +5,12 @@ import App from '../App.css'
 class Search  extends Component {
   render() {
     return (
-     <div>
- 		         
+     <div>         
         <form  action="https://www.adstoptalent.com/">
-	
-	<input type="search" className="search" placeholder="ADS Top Talent"  />
-	<input type="submit" value="Search" />
-</form>
-
-       
-          
-</div>
+		<input type="search" className="search" placeholder="ADS Top Talent"  />
+		<input type="submit" value="Search" />
+		</form>       
+	</div>
 )};
 }
 export default Search ;
