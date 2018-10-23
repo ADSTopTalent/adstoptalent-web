@@ -1,12 +1,24 @@
 import React, { Component } from 'react';
 import '../App.css';
-import SimpleSlider from './SimpleSlider';
+import HeroData from './HeroData';
+
 class Hero extends Component {
   render() {
     return (
-    	<div >
-		 <SimpleSlider />	
-		</div>
-)};
+	    <div>
+		<div className="hero">
+    	   		<HeroData />
+      		</div>
+	    	<div className="callout">
+            		<div className="container-fluid">
+				<p>Sign Up for a Complimentary Results Coaching Session Today!</p>
+				<a  className="opt-in-form btn btn-blue" href="#">Schedule Your Call</a>
+            		</div>
+       		 </div>
+	    </div>
+    );
+  }
 }
+
 export default Hero;
+
