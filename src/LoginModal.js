@@ -3,7 +3,6 @@ import './App.css';
 import JoinUs from './JoinUs';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import isEmail from 'validator/lib/isEmail';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BrowserRouter as Router, Route, Link ,withRouter} from "react-router-dom";
 
@@ -15,27 +14,6 @@ const customStyles = {
     bottom                : '-10%',
     marginRight           : '-40%',
     transform             : 'translate(-50%, -30%)'
-  }
-};
-
-const Error = (props) => (
-  <div {...props} style={{ color: '#A94442' }} />
-);
-
-export const email = (value, props, components) => {
-  if (!isEmail(value)) {
-    return (
-      <Error>{`${value} is not a valid email.`}</Error>
-    );
-  }
-};
-
-export const required = (value, props, components) => {
-  value = ('' + value).trim();
-  if (!value) {
-    return (
-      <Error>{'This field is required.'}</Error>
-    );
   }
 };
 
@@ -80,29 +58,26 @@ class LoginModal extends React.Component {
                 <button className="crossbtn" onClick={this.closeModal}>X</button>
 
                 <form>                 
-                  <h2 className="signintitle">LOGIN</h2>
+                  <h2 className="logintitle">LOGIN</h2>
 
                   <legend>Sign in to view your <span className="GothaMedium">ADS</span> account and status.</legend><br />
                         
                   <label className="loginlabel">EMAIL ADDRESS*</label><br />
 
-                  <input className="logintextfield" name="email" type="email" validations={[required, email]}></input><br />
+                  <input className="logintextfield" name="email" type="email"></input><br />
              
                   <label className="loginlabel">PASSWORD*</label><br />
 
-                  <input className="logintextfield" name="password" type="password" validations={[required]}></input><br />
+                  <input className="logintextfield" name="password" type="password"></input><br />
                         
-                  <input type="checkbox" />Remember me<br/><br />
+                  <input className="logincheckbox" type="checkbox" />Remember me<br/><br />
 
                   <a className="loginlinks" href="#">Forgot Password?</a><br /><br />
 
                   <button className="loginbtn">LOGIN</button><br />
-                      
-                  </form>
-                  Don't have an account ?
-                  <a href="http://localhost:3000/JoinUs">Join us!</a>
-
-
+                    
+                </form>
+                <p className="loginlinks">Don't have an account ?<a className="loginlinks" href="http://localhost:8000/JoinUs">Join us!</a></p>
               </Modal>  
         </div>
       );
