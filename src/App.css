@@ -172,6 +172,135 @@
   border-style: solid;
   border-width: 2px;
   width: 12%;
+
+.App {
+  text-align: center;
+}
+.hero
+{
+background-image: url("https://cdnwp.tonyrobbins.com/wp-content/uploads/2018/08/DSC_8701-Cropped.jpg");
+  max-width: 100%; 
+  height: 534px;
+  overflow: hidden;
+  position: relative;  
+}
+.intro-content {
+   position: relative;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    text-align: center;
+    z-index: 2;
+    padding: 0 15px;
+}
+.intro-content h1 {
+    font-family: "tungsten-medium";
+     font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+    line-height: 1;
+    letter-spacing: 2px;
+    font-size: 100px;
+    padding-top: 10%;
+        color: white;
+}
+.intro-content p {
+    font-size: 16px;
+    line-height: 1.63;
+    font-kerning: normal;
+    margin: 0 0 2rem;
+    color: white;
+}
+.btn {
+    padding: 12px 25px;
+        display: inline-block;
+}
+.btn-blue {
+    border: 2px solid #14aecf;
+    font-size: 12px;
+    line-height: 40px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #fff;
+    text-transform: uppercase;
+    background: #14aecf;
+    -webkit-transition: color 0.3s, background 0.3s;
+    -o-transition: color 0.3s, background 0.3s;
+    transition: color 0.3s, background 0.3s;
+}
+.btn {
+    white-space: inherit;
+    text-decoration: none;
+}
+.btn {
+    border-radius: 0;
+    font-family: "proxima_nova_regular", "Helvetica", san-serif;
+}
+.intro-content strong {
+    display: block;
+    margin-bottom: 32px;
+    font-size: 25px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.callout {
+    background: #f5f5f5 none repeat scroll 0 0;
+    font-size: 25px;
+    padding: 38px 0 37px;
+    text-align: center;
+}
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.callout p {
+    display: inline-block;
+    margin: 0 50px 0 0;
+    vertical-align: middle;
+    font-size: 25px;
+}
+.app-page{
+      box-sizing: inherit;
+}
+.error
+{
+  color: red;
+}
+.app-button
+{
+  background-color: #4CAF50;
+   color: white;
+      padding: 5px 14px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+   
+}
+.login-input
+{
+  float: left;
+  padding: 5px 1px;
+     margin-left: 15px;
+    margin: 8px ; 
+    margin-bottom: 15px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding-left: 5px;
+
 }
 
 .signupbtn {
