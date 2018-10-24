@@ -164,12 +164,10 @@
 .hero
 {
 background-image: url("https://cdnwp.tonyrobbins.com/wp-content/uploads/2018/08/DSC_8701-Cropped.jpg");
- max-width: 100%; 
+  max-width: 100%; 
   height: 534px;
   overflow: hidden;
-  position: relative;
-      top: 120px;
-   
+  position: relative;  
 }
 .intro-content {
    position: relative;
