@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { withStyles } from '@material-ui/core/styles';
+import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField';
 import { BrowserRouter as Router, Route, Link ,withRouter } from "react-router-dom";
 import MyAccount from './MyAccount';
 
@@ -14,7 +19,7 @@ class JoinUs extends Component {
     const lastname = this.refs.lastname.value;
     const emailId = this.refs.emailId.value;
 
-    console.log('emailId: ' +emailId+ ',firstName:' +firstname+ ',lastName:'+lastname);
+    console.log('emailId: ' +emailId+ 'firstName:' +firstname+ 'lastName:'+lastname);
     fetch('http://192.168.0.123:3000/register', {
       method: 'POST',
         headers: {
@@ -35,24 +40,23 @@ class JoinUs extends Component {
   }
 
   render() {
+
     return (
       <div>
         <div className="signupform">
 
-          <p className="joinus">JOIN US</p><hr />
+        <h1 className="joinus">SIGN IN</h1>
 
-          <label className="reqinfo">Required*</label><br />
+        <TextField className="signuptextfield" id="outlined-name" label="FIRST NAME"  ref="firstname" margin="normal" variant="outlined" /><br />
 
-          <label>FIRST NAME*</label><br />
-          <input className="signuptextfield" type="text" ref="firstname" required /><br />
-          
-          <label>LAST NAME*</label><br />
-          <input className="signuptextfield" type="text" ref="lastname" /><br />
+        <TextField className="signuptextfield" id="outlined-name" label="LAST NAME"  ref="lastname" margin="normal" variant="outlined" /><br />
 
-          <label>EMAIL ADDRESS*</label><br />
-          <input className="signuptextfield" type="email" ref="emailId" /><br /><br />
+        <TextField className="signuptextfield" id="outlined-name" label="EMAIL"  ref="emailId" margin="normal" variant="outlined" /><br />
 
-          <button className="signupbtn" onClick={this.onClickButton}>CREATE ACCOUNT click</button>
+        <input className="signupcheckbox" type="checkbox" /> Remember Me<br/><br /><br />
+
+        <button className="signupbtn" onClick={this.onClickButton}>CREATE ACCOUNT</button>
+
         </div>
       </div>
     );

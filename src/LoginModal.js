@@ -1,5 +1,10 @@
 import React from 'react';
 import './App.css';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { withStyles } from '@material-ui/core/styles';
+import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField';
 import JoinUs from './JoinUs';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
@@ -56,28 +61,22 @@ class LoginModal extends React.Component {
                 style={customStyles}
                 contentLabel="Example Modal">
                 <button className="crossbtn" onClick={this.closeModal}>X</button>
-
-                <form>                 
+                <a className="signuplink" href="http://localhost:8000/JoinUs">SIGN IN</a>
+                <form className="loginform">                 
                   <h2 className="logintitle">LOGIN</h2>
 
                   <legend>Sign in to view your <span className="GothaMedium">ADS</span> account and status.</legend><br />
+
+                  <TextField className="logintextfield" id="outlined-name" label="EMAIL"  ref="emailId" margin="normal" variant="outlined" /><br />
+
+                  <TextField className="logintextfield" id="outlined-name" label="PASSWORD"  ref="password" margin="normal" variant="outlined" /><br />
                         
-                  <label className="loginlabel">EMAIL ADDRESS*</label><br />
+                  <input className="logincheckbox" type="checkbox" />Remember me<br/>
 
-                  <input className="logintextfield" name="email" type="email"></input><br />
-             
-                  <label className="loginlabel">PASSWORD*</label><br />
-
-                  <input className="logintextfield" name="password" type="password"></input><br />
-                        
-                  <input className="logincheckbox" type="checkbox" />Remember me<br/><br />
-
-                  <a className="loginlinks" href="#">Forgot Password?</a><br /><br />
-
-                  <button className="loginbtn">LOGIN</button><br />
+                  <button className="loginbtn">LOGIN</button><br /><br />
                     
+                  <a className="loginlinks" href="#">Forgot Password?</a>
                 </form>
-                <p className="loginlinks">Don't have an account ?<a className="loginlinks" href="http://localhost:8000/JoinUs">Join us!</a></p>
               </Modal>  
         </div>
       );
