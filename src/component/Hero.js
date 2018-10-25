@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import '../App.css';
-import HeroData from './HeroData';
 
 class Hero extends Component {
   render() {
     return (
 	    <div>
 		<div className="hero">
-    	   		<HeroData />
-      		</div>
+    	   		</div>
 	    	<div className="callout">
             		<div className="container-fluid">
 				<p>Sign Up for a Complimentary Results Coaching Session Today!</p>
