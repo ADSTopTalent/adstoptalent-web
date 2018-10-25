@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import GlobalHeader from './GlobalHeader';
 import JoinUs from './JoinUs';
 import Main from './component/Main';
-import Navigation from './Navigation';
+//import Navigation from './Navigation';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 import './AppNavigation.css';
@@ -20,7 +20,7 @@ class App extends Component {
       <Router>
         <div>
           <GlobalHeader />
-          <Navigation />
+          
           <Main />
 	      	<Route path="/JoinUs" component={JoinUs} />
       	</div>
