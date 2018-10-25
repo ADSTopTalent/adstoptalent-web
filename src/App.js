@@ -12,7 +12,7 @@ import { faGhost } from '@fortawesome/free-solid-svg-icons';
 
 
 library.add(faGhost)
-
+  
 class App extends Component {
   render() {
     return (
