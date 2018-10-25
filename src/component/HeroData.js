@@ -7,7 +7,7 @@ class HeroData extends Component {
  		<div className="intro-content">
 		     <h1>Transform Your Life</h1>
 		     <p><strong>Close the gap between where you are today – and where you want to be</strong></p>
-		     <a href="https://core.tonyrobbins.com/wheel-of-life-4" className="btn btn-blue">Take Our Free Life Assessment</a>
+		     <a href="https://affluencesolutions.com" className="btn btn-blue">Take Our Free Life Assessment</a>
         </div>
   	);
   }

@@ -1,33 +1,28 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
+import GlobalHeader from './GlobalHeader';
+import JoinUs from './JoinUs';
 import Main from './component/Main';
-import './App.css';
-=======
-import './AppNavigation.css';
-import Header from './component/Header';
-import Hero from './component/Hero';
 import Navigation from './Navigation';
-<<<<<<< HEAD
-import Footer from './component/Footer';
-class App extends Component {
-  render() {
-    return (
-      <div className="app-page"> 
-        <Navigation />
-=======
->>>>>>> ATT-Navigation
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import './App.css';
+import './AppNavigation.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGhost } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faGhost)
 
 class App extends Component {
   render() {
     return (
-      <div >
-<<<<<<< HEAD
-          <Header />
-=======
-       <Navigation />
->>>>>>> ATT-Navigation
->>>>>>> develop
-      </div>
+      <Router>
+        <div>
+          <GlobalHeader />
+          <Navigation />
+          <Main />
+	      	<Route path="/JoinUs" component={JoinUs} />
+      	</div>
+      </Router>    
     );
   }
 }
