@@ -3,6 +3,8 @@ import './App.css';
 import JoinUs from './JoinUs';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
+import isEmail from 'validator/lib/isEmail';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BrowserRouter as Router, Route, Link ,withRouter} from "react-router-dom";
 
@@ -20,6 +22,25 @@ const customStyles = {
 const Error = (props) => (
   <div {...props} style={{ color: '#A94442' }} />
 );
+
+export const email = (value, props, components) => {
+  if (!isEmail(value)) {
+    return (
+      <Error>{`${value} is not a valid email.`}</Error>
+    );
+  }
+};
+
+export const required = (value, props, components) => {
+  value = ('' + value).trim();
+  if (!value) {
+    return (
+      <Error>{'This field is required.'}</Error>
+    );
+  }
+};
+
+// Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
 
 
 class LoginModal extends React.Component {
@@ -67,11 +88,19 @@ class LoginModal extends React.Component {
                         
                   <label className="loginlabel">EMAIL ADDRESS*</label><br />
 
+
                   <input className="logintextfield" name="email" type="email"></input><br />
              
                   <label className="loginlabel">PASSWORD*</label><br />
 
                   <input className="logintextfield" name="password" type="password"></input><br />
+
+                  <input className="logintextfield" name="email" type="email" validations={[required, email]}></input><br />
+             
+                  <label className="loginlabel">PASSWORD*</label><br />
+
+                  <input className="logintextfield" name="password" type="password" validations={[required]}></input><br />
+
                         
                   <input type="checkbox" />Remember me<br/><br />
 
