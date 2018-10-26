@@ -6,7 +6,8 @@ class Hero extends Component {
     return (
 	    <div>
 		<div className="hero">
-    	   		</div>
+    	   	
+      		</div>
 	    	<div className="callout">
             		<div className="container-fluid">
 				<p>Sign Up for a Complimentary Results Coaching Session Today!</p>
