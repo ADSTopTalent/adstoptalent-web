@@ -4,7 +4,7 @@ import './AppNavigation.css';
 class HeaderContainer1 extends Component {
     constructor(props){
     super(props);
-    this.state= {data1:[{"title":"Home","menu":["ADS"]}], data2:[{"title":"ABOUT","menu":["ABOUT ADS","COMPANY CULTURE","CONTRIBUTION"]}],data3:[{"title":"STORE","menu":["ALL PRODUCTS","TRAINING SYSTEM"]}],data4:[{"title":"EXPERIENCES","menu":["ALL UPCOMING EVENTS","UNLEASH THE POWER WITHIN","DATE WITHIN DESTINY","LIFE AND WEALTH MEASTRY","LEADERSHIP ACADEMY"]}],data5:[{"title":"COACHING","menu":["RESULTS COACHING"]}],data6:[{"title":"BLOG","menu":["READ ALL BLOGS"]}]};
+    this.state= {data1:[{"title":"Home","menu":["ADS1"]}], data2:[{"title":"ABOUT","menu":["ABOUT ADS","COMPANY CULTURE","CONTRIBUTION"]}],data3:[{"title":"STORE","menu":["ALL PRODUCTS","TRAINING SYSTEM"]}],data4:[{"title":"EXPERIENCES","menu":["ALL UPCOMING EVENTS","UNLEASH THE POWER WITHIN","DATE WITHIN DESTINY","LIFE AND WEALTH MEASTRY","LEADERSHIP ACADEMY"]}],data5:[{"title":"COACHING","menu":["RESULTS COACHING"]}],data6:[{"title":"BLOG","menu":["READ ALL BLOGS"]}]};
 
   }
   render() {
