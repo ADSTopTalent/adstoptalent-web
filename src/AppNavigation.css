@@ -15,6 +15,7 @@ p a {
     color: #14aecf;
 }
 
+
 .phonenumber > .fa-phone {
     display: none;
 }
@@ -605,6 +606,8 @@ ul.social-icons {
 
 }
 
+
+
 .header-container {
     width: 100%;
     padding: 0 40px;
@@ -631,26 +634,54 @@ ul.social-icons {
     content: " ";
 }
 
-nav{
+@media screen and (max-width: 600px){
+    .dropdown {
+    position: relative;
+    display: outline;
+    float:left;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color:white;
+    min-width: 160px;
+    z-index: 1;
+    color:white;
+}
+
+.dropdown-menu a {
+    color: black;
+    text-decoration: none;
     display: block;
 }
+}
+
 #desktop-nav {
-    margin: 0;
+    margin-top: 0px;
     padding: 0;
     clear: both;
     color: #3d3d3d;
-    position: fixed;
     top: 40px;
     left: 0;
     right: 0;
     z-index: 999;
     background-color: #fff;
+      transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -webkit-transform: translate3d(0,0,0);
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 
+.clearfix{
+     transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -webkit-transform: translate3d(0,0,0);
+
+}
 .nav-logo img {
     display: block;
     margin: 0;

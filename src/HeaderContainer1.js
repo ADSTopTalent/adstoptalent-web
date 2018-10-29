@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './AppNavigation.css';
+import AppNavigation from './AppNavigation.css';
 
 class HeaderContainer1 extends Component {
     constructor(props){
@@ -7,9 +7,10 @@ class HeaderContainer1 extends Component {
     this.state= {data1:[{"title":"Home","menu":["ADS"]}], data2:[{"title":"ABOUT","menu":["ABOUT ADS","COMPANY CULTURE","CONTRIBUTION"]}],data3:[{"title":"STORE","menu":["ALL PRODUCTS","TRAINING SYSTEM"]}],data4:[{"title":"EXPERIENCES","menu":["ALL UPCOMING EVENTS","UNLEASH THE POWER WITHIN","DATE WITHIN DESTINY","LIFE AND WEALTH MEASTRY","LEADERSHIP ACADEMY"]}],data5:[{"title":"COACHING","menu":["RESULTS COACHING"]}],data6:[{"title":"BLOG","menu":["READ ALL BLOGS"]}]};
 
   }
+  
   render() {
     return (
-      <div className="header-container">
+      <div className="header-container" id="sidebar">
 
             <ul className="nav-logo">
                 <li>
