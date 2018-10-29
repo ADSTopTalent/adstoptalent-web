@@ -4,13 +4,13 @@ import AppNavigation from './AppNavigation.css';
 
 class Navigation extends Component {
   
-  constructor(props) {
+  	constructor(props) {
       super(props);
       this.state = {
       scrollingLock: false,
       };
       this.handleScroll = this.handleScroll.bind(this)
-	}
+    }
 
 	componentDidMount(){
       window.addEventListener('scroll', this.handleScroll);
@@ -30,13 +30,16 @@ class Navigation extends Component {
       scrollingLock: false
       });
   	} 	
-}
-
+    	
+  	}
+  	
+} 
+	
   	render() {
     return (
       	<nav id="desktop-nav"  className="clearfix" style={{	width: "100%", position:this.state.scrollingLock ? "fixed": "relative",top:this.state.scrollingLock ? "0px":"40px"}}>
           <HeaderContainer1/>
-      	</nav>
+      	</div>
     );
   }
 }

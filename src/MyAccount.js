@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 
-class App extends Component {
+class MyAccount extends Component {
   render() {
     return (
-      	<div className="Gheader">
-	      
+      	<div>
+	      Welcome to your MyAccount
 	    </div>
       )
   }
 }
 
-export default App;
+export default MyAccount;

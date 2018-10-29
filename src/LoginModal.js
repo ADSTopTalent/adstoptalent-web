@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { withStyles } from '@material-ui/core/styles';
+import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField';
 import JoinUs from './JoinUs';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import isEmail from 'validator/lib/isEmail';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BrowserRouter as Router, Route, Link ,withRouter} from "react-router-dom";
 
@@ -19,29 +22,7 @@ const customStyles = {
   }
 };
 
-const Error = (props) => (
-  <div {...props} style={{ color: '#A94442' }} />
-);
-
-export const email = (value, props, components) => {
-  if (!isEmail(value)) {
-    return (
-      <Error>{`${value} is not a valid email.`}</Error>
-    );
-  }
-};
-
-export const required = (value, props, components) => {
-  value = ('' + value).trim();
-  if (!value) {
-    return (
-      <Error>{'This field is required.'}</Error>
-    );
-  }
-};
-
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
-
 
 class LoginModal extends React.Component {
   constructor() {
@@ -80,39 +61,22 @@ class LoginModal extends React.Component {
                 style={customStyles}
                 contentLabel="Example Modal">
                 <button className="crossbtn" onClick={this.closeModal}>X</button>
-
-                <form>                 
-                  <h2 className="signintitle">LOGIN</h2>
+                <a className="signuplink" href="http://localhost:8000/JoinUs">SIGN IN</a>
+                <form className="loginform">                 
+                  <h2 className="logintitle">LOGIN</h2>
 
                   <legend>Sign in to view your <span className="GothaMedium">ADS</span> account and status.</legend><br />
+
+                  <TextField className="logintextfield" id="outlined-name" label="EMAIL"  ref="emailId" margin="normal" variant="outlined" /><br />
+
+                  <TextField className="logintextfield" id="outlined-name" label="PASSWORD"  ref="password" margin="normal" variant="outlined" /><br />
                         
-                  <label className="loginlabel">EMAIL ADDRESS*</label><br />
+                  <input className="logincheckbox" type="checkbox" />Remember me<br/>
 
-
-                  <input className="logintextfield" name="email" type="email"></input><br />
-             
-                  <label className="loginlabel">PASSWORD*</label><br />
-
-                  <input className="logintextfield" name="password" type="password"></input><br />
-
-                  <input className="logintextfield" name="email" type="email" validations={[required, email]}></input><br />
-             
-                  <label className="loginlabel">PASSWORD*</label><br />
-
-                  <input className="logintextfield" name="password" type="password" validations={[required]}></input><br />
-
-                        
-                  <input type="checkbox" />Remember me<br/><br />
-
-                  <a className="loginlinks" href="#">Forgot Password?</a><br /><br />
-
-                  <button className="loginbtn">LOGIN</button><br />
-                      
-                  </form>
-                  Don't have an account ?
-                  <a href="http://localhost:3000/JoinUs">Join us!</a>
-
-
+                  <button className="loginbtn">LOGIN</button><br /><br />
+                    
+                  <a className="loginlinks" href="#">Forgot Password?</a>
+                </form>
               </Modal>  
         </div>
       );
