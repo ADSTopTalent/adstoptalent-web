@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import GlobalHeader from './GlobalHeader';
 import SignUp from './SignUp';
+import Main from './component/Main';
+import Navigation from './Navigation';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGhost } from '@fortawesome/free-solid-svg-icons';
