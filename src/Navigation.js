@@ -35,7 +35,7 @@ class Navigation extends Component {
     	return (
       	<nav id="desktop-nav"  className="clearfix" style={{	width: "100%", position:this.state.scrollingLock ? "fixed": "relative",top:this.state.scrollingLock ? "0px":"40px"}}>
           <HeaderContainer1/>
-      	</div>
+      	</nav>
     );
   }
 }
