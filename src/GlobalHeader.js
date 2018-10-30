@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Socialicons from './Socialicons';
 import LoginModal from './LoginModal';
-import JoinUs from './JoinUs';
+import SignUp from './SignUp';
 import MyAccount from './MyAccount';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -13,13 +13,11 @@ class GlobalHeader extends Component {
       	<div className="Gheader"> 
 	      <Socialicons />
 	      <LoginModal />
-	      <Route path ='/JoinUs' component={JoinUs} />
+	      <Route path ='/SignUp' component={SignUp} />
         <Route path ='/MyAccount' component={MyAccount} />
 	    </div>
       </Router>
-   
     );
   }
 }
-
-export default GlobalHeader;
+export default GlobalHeader

@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import { BrowserRouter as Router, Route, Link ,withRouter } from "react-router-dom";
 import MyAccount from './MyAccount';
 
-class JoinUs extends Component {
+class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = { detail : null, firstname: '', lastname:'', emailId:''};
@@ -49,32 +49,28 @@ class JoinUs extends Component {
   }
 
   render() {
-
     return (
       <div>
         <div className="signupform">
+          <h1 className="joinus">SIGN UP</h1>
 
-        <h1 className="joinus">SIGN UP</h1>
+          <TextField className="signuptextfield" value={this.state.firstname} 
+          onChange={this.onChangeFirstName} label="FIRST NAME" 
+          margin="normal" variant="outlined" required /><br />
 
-        <TextField className="signuptextfield" value={this.state.firstname} 
-        onChange={this.onChangeFirstName} minlength="2" label="FIRST NAME" 
-        margin="normal" variant="outlined" /><br />
+          <TextField className="signuptextfield" value={this.state.lastname} 
+          onChange={this.onChangeLastName} label="LAST NAME" 
+          margin="normal" variant="outlined" required /><br />
 
-        <TextField className="signuptextfield" value={this.state.lastname} 
-        onChange={this.onChangeLastName} minlength="2" label="LAST NAME" 
-        margin="normal" variant="outlined" /><br />
+          <TextField className="signuptextfield" value={this.state.emailId} 
+          onChange={this.onChangeEmailId} type="email" label="EMAIL" 
+          margin="normal" variant="outlined" required /><br />
 
-        <TextField className="signuptextfield" value={this.state.emailId} 
-        onChange={this.onChangeEmailId} type="email" label="EMAIL" 
-        margin="normal" variant="outlined" /><br />
-
-        <input className="signupcheckbox" type="checkbox" /> Remember Me<br/><br />
-
-        <button className="signupbtn" onClick={this.onClickButton}>CREATE ACCOUNT</button>
-
+          <input className="signupcheckbox" type="checkbox" /> Remember Me<br/><br />
+          <button className="signupbtn" onClick={this.onClickButton}>CREATE ACCOUNT</button>
         </div>
       </div>
     );
   }
 }
-export default JoinUs;
+export default SignUp;
