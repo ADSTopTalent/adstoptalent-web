@@ -71,7 +71,7 @@
 }
 
 .loginform {
-  margin-left: 17%; 
+  margin-left: 15%; 
   margin-top: 0%;
   font-size: 20px; 
 }
@@ -105,31 +105,35 @@
 }
 
 .loginbtn {
-  background-color: #1A2B6D;
-  color: white;
-  margin-left: 32%;
-  cursor: pointer;
-  width: 100px;
-  height: 40px;
+    margin-left: 32%;
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #1A2B6D;
+    border: none;
+    border-radius: 15px;
 }
 
 .signuplink {
   position: relative;
   float: left;
   border: none;
-  top: -22px;
-  left: -15px;
+  top: -42px;
+  left: 43%;
   color: #1A2B6D;
   cursor: pointer;
-  text-decoration: none;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .crossbtn{
-  position: relative;
   float: right;
   border: none;
-  size: 14px;
   top: -20px;
   left: 20px;
   color:  #000000;
@@ -152,7 +156,7 @@
 }
 
 .joinus {
-  margin-top: 60px;
+  margin-top: 90px;
   margin-left: -57%;
   color: black;
   text-align: center;
@@ -162,9 +166,6 @@
   width: 45%;
   height: 50px;
 }
-
-
-
 .hero
 {
   background-image: url("https://pbs.twimg.com/profile_banners/979404745558364163/1526526035/1500x500");    max-width: 100%; 
@@ -277,7 +278,6 @@
     margin: 8px 0;
     border: none;
     cursor: pointer;
-   
 }
  
 .signupbtn {
@@ -289,3 +289,35 @@
   height: 50px;
 }
 
+.welcome {
+  margin-top: 7%;
+  color: black;
+  text-align: left;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.showpassword{
+  display: inline-block;
+  padding: 4px 16px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #1A2B6D;
+  border: none;
+  border-radius: 15px;  
+}
+
+.modal {
+  opacity: 1;
+  position: fixed;
+  border: 1px solid black;
+}
+
+.modal-fade {
+  background-color: red;
+  opacity: 0.5;
+}
