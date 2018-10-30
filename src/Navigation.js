@@ -13,11 +13,11 @@ class Navigation extends Component {
     }
 
 	componentDidMount(){
-      window.addEventListener('scroll', this.handleScroll);
-    }
+        	window.addEventListener('scroll', this.handleScroll);
+    	}
 
 	componentWillUnmount() {
-      window.removeEventListener('scroll', this.handleScroll);
+      		window.removeEventListener('scroll', this.handleScroll);
 	}
 
 	handleScroll() {
@@ -30,13 +30,9 @@ class Navigation extends Component {
       scrollingLock: false
       });
   	} 	
-    	
-  	}
-  	
-} 
-	
+	}
   	render() {
-    return (
+    	return (
       	<nav id="desktop-nav"  className="clearfix" style={{	width: "100%", position:this.state.scrollingLock ? "fixed": "relative",top:this.state.scrollingLock ? "0px":"40px"}}>
           <HeaderContainer1/>
       	</div>
