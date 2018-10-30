@@ -15,7 +15,6 @@ p a {
     color: #14aecf;
 }
 
-
 nav{
     position: -webkit-sticky;
   position: sticky;
@@ -30,6 +29,7 @@ nav{
   width: 100%;
   z-index: 999;
 }
+
 
 
 .phonenumber > .fa-phone {
@@ -656,9 +656,20 @@ top: 0;
     display: block;
 }
 
- .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
-    display: table;
-    content: " ";
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color:white;
+    min-width: 160px;
+    z-index: 1;
+    color:white;
+}
+
+.dropdown-menu a {
+    color: black;
+    text-decoration: none;
+    display: block;
 }
 
 
@@ -673,12 +684,21 @@ top: 0;
     right: 0;
     z-index: 999;
     background-color: #fff;
+      transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -webkit-transform: translate3d(0,0,0);
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 
+.clearfix{
+     transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -webkit-transform: translate3d(0,0,0);
+
+}
 .nav-logo img {
     display: block;
     margin: 0;
