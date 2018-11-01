@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
+import './hero.css';
 
 class Hero extends Component {
   render() {
@@ -20,4 +20,3 @@ class Hero extends Component {
 }
 
 export default Hero;
-
