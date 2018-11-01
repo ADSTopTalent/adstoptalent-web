@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import './Transition.css';
 import TextField from '@material-ui/core/TextField';
-import SignUp from './SignUp';
+import JoinUs from './JoinUs.js';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -121,7 +121,7 @@ class LoginModal extends React.Component {
       
             <a className="loginlinks" href="#">Forgot Password?</a><br/>
             <p>Don't have an account ?</p>
-            <a className="signuplink" href="/SignUp">SIGN UP</a>
+            <a className="signuplink" href="/JoinUs">SIGN UP</a>
           </form>
         </Modal>  
       </div>
