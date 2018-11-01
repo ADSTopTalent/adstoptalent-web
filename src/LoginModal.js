@@ -121,7 +121,7 @@ class LoginModal extends React.Component {
       
             <a className="loginlinks" href="#">Forgot Password?</a><br/>
             <p>Don't have an account ?</p>
-            <a className="signuplink" href="/SignUp">SIGN UP</a>
+            <a className="signuplink" href="/SignUp.js">SIGN UP</a>
           </form>
         </Modal>  
       </div>
