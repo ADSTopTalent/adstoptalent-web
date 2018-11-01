@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import GlobalHeader from './GlobalHeader';
-import SignUp from './SignUp';
+import JoinUs from './JoinUs';
 import Main from './component/Main';
 import Navigation from './Navigation';
 import { library } from '@fortawesome/fontawesome-svg-core';
