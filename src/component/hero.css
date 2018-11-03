@@ -1,11 +1,10 @@
 .hero{
-   
     padding: auto;
     background: url('https://pbs.twimg.com/profile_banners/979404745558364163/1526526035/1500x500'); 
     background-size: cover;
     height: 500px;
     position: relative;
-   z-index:1;
+    z-index:1;
 }
 .callout {
     background: #f5f5f5 none repeat scroll 0 0;
