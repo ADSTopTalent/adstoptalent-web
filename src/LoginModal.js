@@ -1,10 +1,11 @@
 import React from 'react';
 import './Header.css';
 import './Transition.css';
-import TextField from '@material-ui/core/TextField';
 import JoinUs from './JoinUs.js';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
+import { expect } from 'chai';
+import TextField from '@material-ui/core/TextField';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BrowserRouter as Router, Route, Link ,withRouter} from "react-router-dom";
 
@@ -28,7 +29,6 @@ const customStyles = {
 };
 Modal.defaultStyles.overlay.zIndex = '1010';
 Modal.defaultStyles.overlay.background = 'rgba(0, 0, 0, 0.26)';
-Modal.defaultStyles.overlay.opacity = '0.8';
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
 class LoginModal extends React.Component {
   constructor() {
