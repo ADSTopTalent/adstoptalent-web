@@ -2,6 +2,7 @@ import React from 'react';
 import './Header.css';
 import './Transition.css';
 import JoinUs from './JoinUs.js';
+import Thanks from './Thanks';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import TextField from '@material-ui/core/TextField';
@@ -80,7 +81,7 @@ class LoginModal extends React.Component {
     })
     .then(response => response.json())
     .then(data => this.props.history.push({
-      pathname: "/MyAccount",
+      pathname: "/Thanks",
       state: {detail: data}
     }));
   }
@@ -101,7 +102,7 @@ class LoginModal extends React.Component {
           style={customStyles}
           contentLabel="Example Modal">
           <button className="crossbtn" onClick={this.closeModal}>
-          <img src="https://cdn2.iconfinder.com/data/icons/media-controls-5/100/close-512.png" />
+          <img className="crossimg" src="https://cdn2.iconfinder.com/data/icons/media-controls-5/100/close-512.png" />
           </button>
           <form className="loginform">                 
             <h2 className="logintitle">LOGIN</h2>
