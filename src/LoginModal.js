@@ -1,10 +1,11 @@
 import React from 'react';
 import './Header.css';
 import './Transition.css';
-import TextField from '@material-ui/core/TextField';
 import JoinUs from './JoinUs.js';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
+import { expect } from 'chai';
+import TextField from '@material-ui/core/TextField';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BrowserRouter as Router, Route, Link ,withRouter} from "react-router-dom";
 

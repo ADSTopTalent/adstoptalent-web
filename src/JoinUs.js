@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './Header.css';
 import './Transition.css';
 import TextField from '@material-ui/core/TextField';
 import { BrowserRouter as Router, Route, Link ,withRouter } from "react-router-dom";
@@ -29,7 +29,7 @@ class JoinUs extends Component {
   const emailId = this.state.emailId;
 
     console.log('emailId: ' +emailId+ 'firstname:' +firstname+ 'lastname:'+lastname);
-    fetch('http://192.168.0.123:3000/register', {
+    fetch('http://13.233.71.164:3000/register', {
       method: 'POST',
         headers: {
           'Accept': 'application/json',
