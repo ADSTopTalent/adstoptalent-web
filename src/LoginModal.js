@@ -4,7 +4,6 @@ import './Transition.css';
 import JoinUs from './JoinUs.js';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import { expect } from 'chai';
 import TextField from '@material-ui/core/TextField';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BrowserRouter as Router, Route, Link ,withRouter} from "react-router-dom";
@@ -102,7 +101,7 @@ class LoginModal extends React.Component {
           style={customStyles}
           contentLabel="Example Modal">
           <button className="crossbtn" onClick={this.closeModal}>
-          <img width="10px" height="10px" src="https://cdn2.iconfinder.com/data/icons/media-controls-5/100/close-512.png" />
+          <img src="https://cdn2.iconfinder.com/data/icons/media-controls-5/100/close-512.png" />
           </button>
           <form className="loginform">                 
             <h2 className="logintitle">LOGIN</h2>

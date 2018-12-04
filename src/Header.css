@@ -143,6 +143,8 @@
   left: 20px;
   color:  #000000;
   cursor: pointer;
+  width: 10px;
+  height: 10px;
 }
 
 .reqinfo {
@@ -205,6 +207,7 @@
   border: none;
   border-radius: 15px;  
 }
+
 
 
 
