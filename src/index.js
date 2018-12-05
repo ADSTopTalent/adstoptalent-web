@@ -7,4 +7,5 @@ import Routing from './Routing';
 
 ReactDOM.render(<Routing />
 , document.getElementById('root'));
+
 registerServiceWorker();
