@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './Header.css';
 import './Transition.css';
 import TextField from '@material-ui/core/TextField';
 import JoinUs from './JoinUs.js';
@@ -14,18 +14,20 @@ const customStyles = {
     top                   : '35%',
     left                  : '50%',
     right                 : '45%',
-    bottom                : '-18%',
+    bottom                : '-11%',
     marginRight           : '-40%',
     transform             : 'translate(-50%, -30%)',
     zIndex                : '1100',
     background            : 'white',
     padding               : '0',
     marginBottom          : '53px',
-    display               : 'block'
+    display               : 'block',
+    overflow              : 'hidden',
+    opacity               : '1'
   }
 };
-Modal.defaultStyles.overlay.backgroundColor = 'grey';
-Modal.defaultStyles.overlay.zIndex = '1040';
+Modal.defaultStyles.overlay.zIndex = '1010';
+Modal.defaultStyles.overlay.background = 'rgba(0, 0, 0, 0.26)';
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
 class LoginModal extends React.Component {
   constructor() {
@@ -99,7 +101,7 @@ class LoginModal extends React.Component {
           style={customStyles}
           contentLabel="Example Modal">
           <button className="crossbtn" onClick={this.closeModal}>
-          <img width="20px" height="20px" src="https://cdn2.iconfinder.com/data/icons/media-controls-5/100/close-512.png" />
+          <img width="10px" height="10px" src="https://cdn2.iconfinder.com/data/icons/media-controls-5/100/close-512.png" />
           </button>
           <form className="loginform">                 
             <h2 className="logintitle">LOGIN</h2>
@@ -113,7 +115,7 @@ class LoginModal extends React.Component {
             variant="outlined" required /><br />
         
             <span className="showpassword" onClick={this.showHide}> 
-            {this.state.type === 'input' ? 'Hide' : 'Show'}</span><br/>
+            {this.state.type === 'input' ? 'Hide' : 'Show'}</span>
                         
             <input className="logincheckbox" type="checkbox" />Remember me<br/>
 
@@ -121,7 +123,7 @@ class LoginModal extends React.Component {
       
             <a className="loginlinks" href="#">Forgot Password?</a><br/>
             <p>Don't have an account ?</p>
-            <a className="signuplink" href="/JoinUs">SIGN UP</a>
+            <Link to ="/JoinUs" onClick={this.closeModal} className="signuplink">SIGN UP</Link>
           </form>
         </Modal>  
       </div>
