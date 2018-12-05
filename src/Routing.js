@@ -7,8 +7,7 @@ import verify from './verify';
 import JoinUs from './JoinUs';
 import App from './App';
 import sucess from './sucess';
-import Thanks from './Thanks';
-import Error from './Error';
+
 
 class Routing extends Component{
 	render(){
@@ -17,8 +16,7 @@ class Routing extends Component{
 		<Router>	
 			<div>
 				<Route exact path='/' component={App} />
-				<Route path='/Thanks' component={Thanks} />
-				<Route path='/Error' component={Error} />
+			
 				<Route path='/sucess' component={sucess} />
 				<Route path='/JoinUs' component={JoinUs} />
 				<Route path='/MyAccount' component={MyAccount} />
