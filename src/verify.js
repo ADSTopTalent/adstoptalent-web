@@ -12,7 +12,7 @@ class verify extends Component{
 		console.log(this.props);
 		console.log(this.props.match.params.id);
 		var tokenid = this.props.match.params.id;
-		//fetch('http://192.168.0.123:3000/verify', {
+		
 			fetch('http://13.233.71.164:3000/verify', {
     			 method: 'POST',
 		       headers: {

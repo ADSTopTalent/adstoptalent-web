@@ -47,7 +47,7 @@ class Signup2 extends Component {
         onRegisterMe=()=>{
           if (this.state.password === this.state.cpassword) {
               this.setState({massage:''});
-             // fetch('http://192.168.0.123:3000/registerfinal', {
+   
               fetch('http://13.233.71.164:3000/registerfinal', {
             method: 'POST',
             headers: {
