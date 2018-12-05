@@ -6,7 +6,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
 import './App.css'
-import MyAccount from './MyAccount';
+import sucess from './sucess';
 import GlobalHeader from './GlobalHeader';
 import Navigation from './Navigation';
 
@@ -47,6 +47,7 @@ class Signup2 extends Component {
         onRegisterMe=()=>{
           if (this.state.password === this.state.cpassword) {
               this.setState({massage:''});
+             // fetch('http://192.168.0.123:3000/registerfinal', {
               fetch('http://13.233.71.164:3000/registerfinal', {
             method: 'POST',
             headers: {
@@ -67,7 +68,7 @@ class Signup2 extends Component {
           })
              .then(response => response.json())
              .then(data => this.props.history.push({
-                pathname: "/MyAccount",
+                pathname: "/sucess",
                 state: {detail2: data}  
               }));
         }else{

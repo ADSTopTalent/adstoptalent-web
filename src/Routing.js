@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Link ,withRouter } from "react-router-d
 import verify from './verify';
 import JoinUs from './JoinUs';
 import App from './App';
-import MyAccountComponent from './MyAccountComponent';
+import sucess from './sucess';
 
 class Routing extends Component{
 	render(){
@@ -16,7 +16,7 @@ class Routing extends Component{
 			<div>
 
 				<Route exact path='/' component={App} />
-				<Route path='/MyAccountComponent' component={MyAccountComponent} />
+				<Route path='/sucess' component={sucess} />
 				<Route path='/JoinUs' component={JoinUs} />
 				<Route path='/MyAccount' component={MyAccount} />
 				<Route path='/Signup2' component={Signup2} />
