@@ -16,7 +16,6 @@ class Routing extends Component{
 		<div>
 		<Router>	
 			<div>
-
 				<Route exact path='/' component={App} />
 				<Route path='/Thanks' component={Thanks} />
 				<Route path='/Error' component={Error} />
