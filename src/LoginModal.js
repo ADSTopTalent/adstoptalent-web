@@ -2,11 +2,13 @@ import React from 'react';
 import './Header.css';
 import './Transition.css';
 import JoinUs from './JoinUs.js';
+import MyAccount from './MyAccount';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import TextField from '@material-ui/core/TextField';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { BrowserRouter as Router, Route, Link ,withRouter} from "react-router-dom";
+import { hashHistory } from 'react-router';
+import { BrowserRouter as Router, Route, Switch, Link ,withRouter} from "react-router-dom";
 
 const customStyles = {
   content : {
@@ -22,8 +24,7 @@ const customStyles = {
     padding               : '0',
     marginBottom          : '53px',
     display               : 'block',
-    overflow              : 'hidden',
-    opacity               : '1'
+    overflow              : 'hidden'
   }
 };
 Modal.defaultStyles.overlay.zIndex = '1010';
@@ -62,12 +63,13 @@ class LoginModal extends React.Component {
     this.setState({password: event.target.value});
   }
 
-  onClickButton = () => {
+  onLogin = (e) => {
+    e.preventDefault();
   const emailId = this.state.emailId;
   const password = this.state.password;
 
     console.log('emailId: ' +emailId+ 'password:'+password);
-    fetch('http://192.168.0.123:3000/login', {
+    fetch('http://13.233.71.164:3000/login', {
       method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -78,7 +80,7 @@ class LoginModal extends React.Component {
           password: password
         })
     })
-    .then(response => response.json())
+    .then(response => console.log(response))
     .then(data => this.props.history.push({
       pathname: "/MyAccount",
       state: {detail: data}
@@ -101,7 +103,7 @@ class LoginModal extends React.Component {
           style={customStyles}
           contentLabel="Example Modal">
           <button className="crossbtn" onClick={this.closeModal}>
-          <img width="10px" height="10px" src="https://cdn2.iconfinder.com/data/icons/media-controls-5/100/close-512.png" />
+          <img className="crossimg" src="https://cdn2.iconfinder.com/data/icons/media-controls-5/100/close-512.png" />
           </button>
           <form className="loginform">                 
             <h2 className="logintitle">LOGIN</h2>
@@ -119,7 +121,7 @@ class LoginModal extends React.Component {
                         
             <input className="logincheckbox" type="checkbox" />Remember me<br/>
 
-            <button className="loginbtn">LOGIN</button><br />
+            <button onClick={(e) => {this.onLogin(e)}} className="loginbtn">LOGIN</button><br />
       
             <a className="loginlinks" href="#">Forgot Password?</a><br/>
             <p>Don't have an account ?</p>
@@ -130,4 +132,4 @@ class LoginModal extends React.Component {
     );
   }
 }
-export default LoginModal
+export default withRouter(LoginModal);

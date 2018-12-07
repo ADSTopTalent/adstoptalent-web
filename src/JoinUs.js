@@ -3,7 +3,9 @@ import './Header.css';
 import './Transition.css';
 import TextField from '@material-ui/core/TextField';
 import { BrowserRouter as Router, Route, Link ,withRouter } from "react-router-dom";
-import MyAccount from './MyAccount';
+import { hashHistory } from 'react-router';
+import Thanks from './Thanks';
+import Error from './Error';
 
 class JoinUs extends Component {
   constructor(props) {
@@ -28,6 +30,9 @@ class JoinUs extends Component {
   const lastname = this.state.lastname;
   const emailId = this.state.emailId;
 
+    if((this.state.firstname || this.state.firstname || this.state.firstname) === null){
+      this.props.history.push('/Error');
+    }
     console.log('emailId: ' +emailId+ 'firstname:' +firstname+ 'lastname:'+lastname);
     fetch('http://13.233.71.164:3000/register', {
       method: 'POST',
@@ -43,11 +48,10 @@ class JoinUs extends Component {
     })
     .then(response => response.json())
     .then(data => this.props.history.push({
-      pathname: "/MyAccount",
+      pathname: "/Thanks",
       state: {detail: data}
     }));
   }
-
   render() {
     return (
       <div>
@@ -67,10 +71,11 @@ class JoinUs extends Component {
           margin="normal" variant="outlined" required /><br />
 
           <input className="signupcheckbox" type="checkbox" /> Remember Me<br/><br />
+
           <button className="signupbtn" onClick={this.onClickButton}>CREATE ACCOUNT</button>
         </div>
       </div>
     );
   }
 }
-export default JoinUs;
+export default withRouter(JoinUs);

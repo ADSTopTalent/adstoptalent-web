@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
+import {BrowserRouter as Router, Route, Link , withRouter} from 'react-router-dom';
 
 class MyAccount extends Component {
-  render() {
-    return (
-      	<div>
-	      Welcome to your MyAccount
-	    </div>
-      )
-  }
+	render() {
+   		return (  
+    		<div>
+   				<h1>Hii!! Welcome to Affluence Digital Solution</h1>
+      		</div>
+    	);
+	}
 }
-
-export default MyAccount;
+export default MyAccount
