@@ -12,7 +12,7 @@ library.add(faGhost)
 class App extends Component {
   render() {
     return (
-      	<div>
+      	<div className="Gheader">
 	      <GlobalHeader />
 	       <Navigation />
 	       <Main />
