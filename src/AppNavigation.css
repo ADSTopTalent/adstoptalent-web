@@ -656,17 +656,6 @@ top: 0;
     display: block;
 }
 
- .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
-    display: table;
-    content: " ";
-}
-
-@media screen and (max-width: 600px){
-    .dropdown {
-    position: relative;
-    display: outline;
-    float:left;
-}
 
 .dropdown-menu {
     display: none;

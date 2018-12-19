@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
+import './Header.css';
 import Socialicons from './Socialicons';
 import LoginModal from './LoginModal';
 import JoinUs from './JoinUs';
-import MyAccount from './MyAccount';
+import Thanks from './Thanks';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class GlobalHeader extends Component {
@@ -14,12 +14,10 @@ class GlobalHeader extends Component {
 	      <Socialicons />
 	      <LoginModal />
 	      <Route path ='/JoinUs' component={JoinUs} />
-        <Route path ='/MyAccount' component={MyAccount} />
+        <Route path ='/Thanks' component={Thanks} />
 	    </div>
       </Router>
-   
     );
   }
 }
-
-export default GlobalHeader;
+export default GlobalHeader
