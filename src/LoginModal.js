@@ -71,7 +71,7 @@ class LoginModal extends React.Component {
 
                   <TextField className="logintextfield" id="outlined-name" label="PASSWORD"  ref="password" margin="normal" variant="outlined" /><br />
                         
-                  <input className="logincheckbox" type="checkbox" />Remember Me<br/>
+                  <input className="logincheckbox" type="checkbox" />Remember me<br/>
 
                   <button className="loginbtn">LOGIN</button><br /><br />
                     
