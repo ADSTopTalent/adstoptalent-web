@@ -119,7 +119,8 @@ class LoginModal extends React.Component {
             <span className="showpassword" onClick={this.showHide}> 
             {this.state.type === 'input' ? 'Hide' : 'Show'}</span>
                         
-            <input className="logincheckbox" type="checkbox" />Remember me<br/>
+                  <input className="logincheckbox" type="checkbox" />Remember me<br/>
+
 
             <button onClick={(e) => {this.onLogin(e)}} className="loginbtn">LOGIN</button><br />
       
