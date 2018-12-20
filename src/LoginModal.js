@@ -68,7 +68,7 @@ class LoginModal extends React.Component {
   const password = this.state.password;
 
     console.log('emailId: ' +emailId+ 'password:'+password);
-    fetch('http://192.168.0.123:3000/login', {
+    fetch('http://13.233.71.164:3000/login', {
       method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -118,8 +118,7 @@ class LoginModal extends React.Component {
             <span className="showpassword" onClick={this.showHide}> 
             {this.state.type === 'input' ? 'Hide' : 'Show'}</span>
                         
-                  <input className="logincheckbox" type="checkbox" />Remember Me<br/>
-
+            <input className="logincheckbox" type="checkbox" />Remember me<br/>
 
             <button className="loginbtn">LOGIN</button><br />
       
