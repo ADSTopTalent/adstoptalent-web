@@ -2,12 +2,13 @@ import React from 'react';
 import './Header.css';
 import './Transition.css';
 import JoinUs from './JoinUs.js';
-import Thanks from './Thanks';
+import MyAccount from './MyAccount';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import TextField from '@material-ui/core/TextField';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { BrowserRouter as Router, Route, Link ,withRouter} from "react-router-dom";
+import { hashHistory } from 'react-router';
+import { BrowserRouter as Router, Route, Switch, Link ,withRouter} from "react-router-dom";
 
 const customStyles = {
   content : {
@@ -23,8 +24,7 @@ const customStyles = {
     padding               : '0',
     marginBottom          : '53px',
     display               : 'block',
-    overflow              : 'hidden',
-    opacity               : '1'
+    overflow              : 'hidden'
   }
 };
 Modal.defaultStyles.overlay.zIndex = '1010';
@@ -63,7 +63,8 @@ class LoginModal extends React.Component {
     this.setState({password: event.target.value});
   }
 
-  onClickButton = () => {
+  onLogin = (e) => {
+    e.preventDefault();
   const emailId = this.state.emailId;
   const password = this.state.password;
 
@@ -79,9 +80,9 @@ class LoginModal extends React.Component {
           password: password
         })
     })
-    .then(response => response.json())
+    .then(response => console.log(response))
     .then(data => this.props.history.push({
-      pathname: "/Thanks",
+      pathname: "/MyAccount",
       state: {detail: data}
     }));
   }
@@ -118,9 +119,14 @@ class LoginModal extends React.Component {
             <span className="showpassword" onClick={this.showHide}> 
             {this.state.type === 'input' ? 'Hide' : 'Show'}</span>
                         
+<<<<<<< HEAD
             <input className="logincheckbox" type="checkbox" />Remember me<br/>
+=======
+                  <input className="logincheckbox" type="checkbox" />Remember me<br/>
 
-            <button className="loginbtn">LOGIN</button><br />
+>>>>>>> 6587523f99e3a94b7a4a17edfd3daec58e745cf5
+
+            <button onClick={(e) => {this.onLogin(e)}} className="loginbtn">LOGIN</button><br />
       
             <a className="loginlinks" href="#">Forgot Password?</a><br/>
             <p>Don't have an account ?</p>
@@ -131,4 +137,4 @@ class LoginModal extends React.Component {
     );
   }
 }
-export default LoginModal
+export default withRouter(LoginModal);

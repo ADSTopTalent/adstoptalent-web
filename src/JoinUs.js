@@ -3,6 +3,7 @@ import './Header.css';
 import './Transition.css';
 import TextField from '@material-ui/core/TextField';
 import { BrowserRouter as Router, Route, Link ,withRouter } from "react-router-dom";
+import { hashHistory } from 'react-router';
 import Thanks from './Thanks';
 import Error from './Error';
 
@@ -51,7 +52,6 @@ class JoinUs extends Component {
       state: {detail: data}
     }));
   }
-
   render() {
     return (
       <div>
@@ -78,4 +78,4 @@ class JoinUs extends Component {
     );
   }
 }
-export default JoinUs;
+export default withRouter(JoinUs);
