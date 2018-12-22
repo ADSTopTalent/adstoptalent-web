@@ -19,7 +19,7 @@ class GlobalHeader extends Component {
  	      <Route path = '/verify/:id' component={verify} />
         <Route path ='/EmployerRegistraion' component={EmployerRegistraion} />
          <Route path ='/Thanks' component={Thanks} />
-       	  <Route path = '/verify/:id' component={Verify} />
+       	  
 	    </div>
       </Router>
     );
