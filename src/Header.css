@@ -166,8 +166,7 @@
 }
 
 .joinus {
-  margin-top: 90px;
-  margin-left: -57%;
+  margin-left: 0%;
   color: black;
   text-align: center;
 }
@@ -208,6 +207,8 @@
   border: none;
   border-radius: 15px;  
 }
+
+
 
 
 
