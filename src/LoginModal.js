@@ -3,8 +3,9 @@ import './Header.css';
 import './Transition.css';
 import JoinUs from './JoinUs.js';
 import Thanks from './Thanks';
+import EmployerRegistraion from './EmployerRegistraion';
 import ReactDOM from 'react-dom';
-import Modal from 'react-modal';
+import Modal from 'react-modal';  
 import TextField from '@material-ui/core/TextField';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BrowserRouter as Router, Route, Link ,withRouter} from "react-router-dom";
@@ -86,6 +87,8 @@ class LoginModal extends React.Component {
     }));
   }
 
+  
+
   render() {
     return (
       <div className="nav-utilities">
@@ -121,10 +124,12 @@ class LoginModal extends React.Component {
             <input className="logincheckbox" type="checkbox" />Remember me<br/>
 
             <button className="loginbtn">LOGIN</button><br />
-      
+
             <a className="loginlinks" href="#">Forgot Password?</a><br/>
             <p>Don't have an account ?</p>
             <Link to ="/JoinUs" onClick={this.closeModal} className="signuplink">SIGN UP</Link>
+            <Link to ="/EmployerRegistraion" onClick={this.closeModal} className="signuplink">&nbsp;&nbsp;SIGN UP FOR EMPLOYER</Link>
+            
           </form>
         </Modal>  
       </div>

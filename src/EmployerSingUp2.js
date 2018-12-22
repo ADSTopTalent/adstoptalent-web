@@ -10,7 +10,7 @@ import sucess from './sucess';
 import GlobalHeader from './GlobalHeader';
 import Navigation from './Navigation';
 
-class Signup2 extends Component {
+class EmployerSingUp2 extends Component {
       state = {
         detail2:[],massage:'',
           emailId:'',password:'',cpassword:'',address1:'',address2:'', city:'', state:'', zip:'',country:''
@@ -77,7 +77,8 @@ class Signup2 extends Component {
       }
 
  render() {
-	var data = this.props.location.state.detail;
+  console.log(this.props.location.state.details);
+	var data = this.props.location.state.details;
    return (  
     <div>
       <div className="Gheader">
@@ -86,44 +87,48 @@ class Signup2 extends Component {
       </div>
     <div className="App">
     <React.Fragment>
+
       <Grid container spacing={24}  direction="column"  alignItems="center">
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="firstName"
-            name="firstName"
-            label="First name"
+            id="Organization"
+            name="Organization"
+            label="Organization "
             margin="normal"
             variant="outlined"
-           value={data.firstname}
+           value={data.Organization}
            className="textfield"
           />
         </Grid>
+
         <Grid item xs={12} sm={6} >
           <TextField
             required
-            id="lastName"
-            name="lastName"
-            label="Last name"
-            autoComplete="lname"
+            id="EmailId"
+            name="EmailId"
+            label="EmailId"
+            autoComplete="EmailId"
             variant="outlined"
-            value={data.lastname}
+            value={data.emailId}
              margin="normal"
               className="textfield"
           /> 
         </Grid>
+
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="emIL"
-            value={data.emailId}
-            label="Email ID"
-            autoComplete="email"
+            id="Name"
+            value={data.Name}
+            label="Name"
+            autoComplete="Name"
             variant="outlined"
             margin="normal"
              className="textfield"
           />
         </Grid>
+
         <Grid item xs={12} sm={6}>
         <TextField
           required
@@ -133,12 +138,13 @@ class Signup2 extends Component {
           onChange={this.handleChangePassword}
           variant="outlined"
            margin="normal"
-            className="textfield"
-          />
-          </Grid>
-           <p style={{color: 'red'}}>{this.state.massage}</p>
+            className="textfield"/>          
+         </Grid>
+
+          <p style={{color: 'red'}}>{this.state.massage}</p>
+
           <Grid item xs={12} sm={6}>
-        <TextField
+          <TextField
           required
           label="Confirm Password"
           type="password"
@@ -146,9 +152,9 @@ class Signup2 extends Component {
           onChange={this.handleChangeConfirmPassword}
           variant="outlined"
           margin="normal"
-           className="textfield"
-          />
-          </Grid>
+          className="textfield"/>          
+        </Grid>
+
         <Grid item xs={12} sm={6}>
           <TextField
             required
@@ -159,11 +165,11 @@ class Signup2 extends Component {
             autoComplete="billing address-line1"
             variant="outlined"
              margin="normal"
-              className="textfield"
-          />
+             className="textfield"/>
+          
         </Grid> 
-        <Grid item  xs={12} sm={6}>
-          <TextField
+          <Grid item  xs={12} sm={6}>
+            <TextField
             id="address2"
             name="address2"
             label="Address line 2"
@@ -172,9 +178,9 @@ class Signup2 extends Component {
             onChange={this.handleChangeAddress2}
             autoComplete="billing address-line2"
             variant="outlined"
-             className="textfield"
-          />
+             className="textfield"/>          
         </Grid>
+
         <Grid item xs={12} sm={6}>
           <TextField
             required
@@ -186,9 +192,9 @@ class Signup2 extends Component {
             autoComplete="billing address-level2"
             variant="outlined"
             margin="normal"
-             className="textfield"
-          />
+             className="textfield"/>          
         </Grid>
+
         <Grid item xs={12}  sm={6}>
           <TextField id="state" name="state"
             value={this.state.emaild}
@@ -197,24 +203,23 @@ class Signup2 extends Component {
             margin="normal" 
             value={this.state.state}
             onChange={this.handleChangeState}
-             className="textfield"
-                     />
-          
+             className="textfield"/>                           
         </Grid>
+
         <Grid item xs={12}  sm={6}>
           <TextField
             required
             id="zip"
             name="zip"
             label="Zip / Postal code"
-           margin="normal"
+             margin="normal"
             autoComplete="billing postal-code"
-             value={this.state.zip}
+            value={this.state.zip}
             onChange={this.handleChangeZip}
             variant="outlined"
-             className="textfield"
-          />
+            className="textfield"/>         
         </Grid>
+
         <Grid item xs={12}  sm={6} >
           <TextField
             required
@@ -222,27 +227,27 @@ class Signup2 extends Component {
             name="country"
             label="Country"
             margin="normal"
-             value={this.state.country}
+            value={this.state.country}
             onChange={this.handleChangeCountry}
             autoComplete="billing country"
             variant="outlined"
             color="primary"
-             className="textfield"
-          />
+            className="textfield"/>          
         </Grid>
+
         <Grid item xs={12}  sm={6}>
           <FormControlLabel
             control={<Checkbox color="#f44336" color="primary" name="saveAddress" value="yes" />}
-            label="All Details are Right "
-          />
+            label="All Details are Right " />       
         </Grid>
+
       </Grid>
     </React.Fragment>
       <Button variant="contained" className="btn" color="primary" onClick={this.onRegisterMe}> Register Me</Button>
-      </div>
-      </div>
+  </div>
+</div>
      )
  }
 }
 
-export default Signup2;
+export default EmployerSingUp2;

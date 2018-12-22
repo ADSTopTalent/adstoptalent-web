@@ -1,0 +1,43 @@
+.textfield{
+  width: 320px;
+}
+
+.btn{
+	width: 320px;
+}
+.MuiTypography-root-186.MuiTypography-body1-195.MuiFormControlLabel-label-157{
+	  font-size: 1.875rem;
+}
+
+
+#text{
+  color: #303f9f;
+  margin-left: 22px;
+}
+.Sign{
+    width: 320px;
+    height: 40px;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #1A2B6D;
+    border: none;
+    border-radius: 15px;
+}
+
+.signuptextfield{
+  width: 500px;  
+}
+
+.Registeration{
+  margin:auto;
+
+}
+
+#sing1{
+  background-color: red;
+}
