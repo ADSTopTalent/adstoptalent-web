@@ -13,6 +13,7 @@ import EmployerVerify from './EmployerVerify';
 import EmployerSingUp2 from './EmployerSingUp2';
 
 
+
 class Routing extends Component{
 	render(){
 	return(
@@ -30,7 +31,7 @@ class Routing extends Component{
 				<Route path='/verifyemployer/:id' component={EmployerVerify} />
 				<Route path='/App' component={App} />
 				<Route path= '/EmployerSingUp2' component={EmployerSingUp2} />
-
+				
 			</div>
 		</Router>
 

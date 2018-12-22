@@ -16,9 +16,10 @@ class GlobalHeader extends Component {
 	      <Socialicons />
 	      <LoginModal />
 	      <Route path ='/JoinUs' component={JoinUs} />
-        <Route path ='/Thanks' component={Thanks} />
  	      <Route path = '/verify/:id' component={verify} />
         <Route path ='/EmployerRegistraion' component={EmployerRegistraion} />
+         <Route path ='/Thanks' component={Thanks} />
+       	  <Route path = '/verify/:id' component={Verify} />
 	    </div>
       </Router>
     );
